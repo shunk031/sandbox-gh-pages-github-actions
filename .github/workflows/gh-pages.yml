@@ -7,6 +7,7 @@ name: Page Build
 on:
   push:
     branches: [ master ]
+    paths: [ 'docs/**' ]
   pull_request:
     branches: [ master ]
 
@@ -29,7 +30,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: cd docs && hugo -t learn -d public --gc --minify --cleanDestinationDir
+        run: cd docs && hugo -d public --gc --minify --cleanDestinationDir
       
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
