@@ -7,7 +7,6 @@ name: Page Build
 on:
   push:
     branches: [ master ]
-    paths: [ 'docs/**' ]
   pull_request:
     branches: [ master ]
 
